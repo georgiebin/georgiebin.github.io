@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by anonymous (http://jsbin.com/malawohoci/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.card {
+  background: rgb(225,225,205);
+  width: 390px;
+  height: 235px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mid-circle {
+  background: rgb(0,0,0);
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  margin: 0 auto;
+  
+  display: flex;
+  justify-content: center;
+  
+}
+
+p.icon {
+  display: block;
+  color: rgb(255,255,255);
+  margin: auto;
+}
+
+p.title {
+  display: none;
+  color: rgb(255,255,255);
+  margin: auto;
+}
+
+.mid-circle:hover > p.icon {
+  display: none;
+}
+
+.mid-circle:hover > p.title {
+  display: block;
+}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="mid-circle">
+      <p class="icon"><i class="fa fa-glide-g fa-3x" aria-hidden="true"></i></p>
+      <p class="title">georgie</p>
+    </div>
+  </div>
+
+</body>
+</html>
