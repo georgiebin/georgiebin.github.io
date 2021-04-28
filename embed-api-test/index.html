@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fullscreen Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="player">
+        <iframe
+          width="640"
+          height="400"
+          id="player"
+          src="//video.ibm.com/embed/23757432?api-target-origin=https%3A%2F%2Fvideo.ibm.com"
+          frameborder="0"
+          allowfullscreen
+          webkitallowfullscreen
+          scrolling="no"
+        >
+        </iframe>
+        <div class="controls">
+          <button disabled class="play-pause">play</button>
+          <button disabled class="fullscreen-toggle">fullscreen off</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="./node_modules/ibm-video-streaming-web-player-api/dist/index.umd.min.js"></script>
+    <script>
+      var playing = false;
+      var container = document.querySelector('.container');
+      var playPauseButton = document.querySelector('.play-pause');
+      var fullScreenButton = document.querySelector('.fullscreen-toggle');
+      var api = PlayerAPI('player');
+
+      api.addListener('playing', function(event, value) {
+        playing = value;
+        playPauseButton.innerText = playing ? 'Pause' : 'Play';
+        console.log('GERGO',playing)
+      });
+
+      api.addListener('contentAvailable', function(event) {
+        playPauseButton.disabled = false;
+        fullScreenButton.disabled = false;
+      });
+      // api.callMethod('seek', 10);
+    </script>
+  </body>
+</html>
