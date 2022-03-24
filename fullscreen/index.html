@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Fullscreen Test</title>
+    <style>
+        #Container {
+        position: relative;
+        width: 640px;
+        height: 390px;
+        }
+
+        #Container.fullscreen {
+        width: 100%;
+        height: 100%;
+        }
+
+        #fullScreenBtn {
+        cursor: pointer;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        padding: 5px;
+        background: #38f;
+        color: #fff;
+        }
+        </style>
+</head>
+<body>
+    <div id="Container">
+        <iframe
+          id="UstreamIframe"
+          width="100%" height="100%"
+          src="https://video.ibm.com/embed/1524?hideFullscreen"
+          frameborder="0"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+        <div id="fullScreenBtn"> custom fullscreen button </div>
+      </div>
+</body>
+<script src="javascript.js"></script>
+</html>
